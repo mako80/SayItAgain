@@ -4,6 +4,7 @@
 package ckz.mako80.language;
 
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
@@ -25,6 +26,7 @@ public class Core extends JavaPlugin implements Listener {
 			if (getConfig().getStringList("Words").contains(Words)) {
 				e.setMessage("I love mako80");
 				e.getPlayer().sendMessage("§4§lDon't Curse!");
+				e.getPlayer().setHealth(0.0F);
 			}
 		}
 	}
